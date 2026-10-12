@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="570" viewBox="0 0 1100 570" role="img">
+<rect width="1100" height="570" rx="20" fill="#f8fafc"/>
+<text x="50" y="68" fill="#0f172a" font-size="32" font-family="Noto Sans CJK SC,sans-serif" font-weight="bold">全球管理者敬业度持续下降</text>
+<text x="50" y="109" fill="#475569" font-size="19" font-family="Noto Sans CJK SC,sans-serif">2022—2025 · 按 Gallup 2026 公开百分比重绘 · 单位：%</text>
+<text x="55" y="186" fill="#334155" font-size="22">2022</text>
+<rect x="150" y="152" width="589" height="30" rx="5" fill="#2563eb"/>
+<text x="747" y="175" font-size="19" fill="#1e3a8a">31% 经理</text>
+<rect x="150" y="189" width="380" height="25" rx="5" fill="#94a3b8"/>
+<text x="538" y="208" font-size="17" fill="#475569">20% 非经理</text>
+<text x="55" y="271" fill="#334155" font-size="22">2023</text>
+<rect x="150" y="237" width="570" height="30" rx="5" fill="#2563eb"/>
+<text x="728" y="260" font-size="19" fill="#1e3a8a">30% 经理</text>
+<rect x="150" y="274" width="342" height="25" rx="5" fill="#94a3b8"/>
+<text x="500" y="293" font-size="17" fill="#475569">18% 非经理</text>
+<text x="55" y="356" fill="#334155" font-size="22">2024</text>
+<rect x="150" y="322" width="513" height="30" rx="5" fill="#2563eb"/>
+<text x="671" y="345" font-size="19" fill="#1e3a8a">27% 经理</text>
+<rect x="150" y="359" width="342" height="25" rx="5" fill="#94a3b8"/>
+<text x="500" y="378" font-size="17" fill="#475569">18% 非经理</text>
+<text x="55" y="441" fill="#334155" font-size="22">2025</text>
+<rect x="150" y="407" width="418" height="30" rx="5" fill="#2563eb"/>
+<text x="576" y="430" font-size="19" fill="#1e3a8a">22% 经理</text>
+<rect x="150" y="444" width="361" height="25" rx="5" fill="#94a3b8"/>
+<text x="519" y="463" font-size="17" fill="#475569">19% 非经理</text>
+<text x="50" y="521" font-size="16" fill="#475569">来源：Gallup《State of the Global Workplace 2026》· 2025数据于2026发布</text>
+<text x="50" y="545" font-size="14" fill="#64748b">本项目二次绘图，非Gallup官方原图。敬业度不是晋升概率，也不证明单一原因。</text>
+</svg>

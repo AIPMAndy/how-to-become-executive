@@ -1,0 +1,43 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>如何发布到 GitHub（不覆盖任何现有项目） · 普通人成为高管指南</title><style>body{background:#f7f9fc;color:#1e293b;font:16px/1.9 -apple-system,"Noto Sans CJK SC","PingFang SC",sans-serif;margin:0}header{padding:14px 20px;background:white;border-bottom:1px solid #e1e6ee;position:sticky;top:0;z-index:2}header nav{display:flex;flex-wrap:wrap;gap:10px 20px}header a{margin-right:0}.author-contact{max-width:820px;margin:25px auto 45px;padding:0 20px;font-size:14px;color:#64748b;overflow-wrap:anywhere}main{max-width:820px;margin:25px auto 70px;padding:26px 35px;background:#fff;border:1px solid #e0e6ef;border-radius:16px}h1{font-size:30px;line-height:1.4}h2{font-size:23px;margin-top:38px}h3{font-size:19px}a{color:#235ed9;text-decoration:none}a:hover{text-decoration:underline}p,li{line-height:1.9}blockquote{border-left:3px solid #aac3ef;padding:7px 18px;background:#f6f9ff;margin:20px 0}table{width:100%;border-collapse:collapse;min-width:530px}td,th{border:1px solid #dce4ef;padding:8px;vertical-align:top;font-size:14px}th{background:#f3f6fb}main{overflow-x:auto}pre{overflow:auto;background:#192c44;color:white;padding:15px;border-radius:8px}code{background:#f1f4f8;padding:2px 4px}pre code{background:transparent}img{max-width:100%}@media(max-width:650px){main{margin:10px;padding:18px;border-radius:0}h1{font-size:25px}h2{font-size:21px}}</style></head><body><header><nav aria-label="主要导航"><a href="index.html">← 返回互动指南</a><a href="README.html">项目目录</a><a href="guides/00-start.html">从这里开始</a><a href="https://metaver.vip/" target="_blank" rel="noopener noreferrer">Andy 官网 ↗</a></nav></header><main><h1>如何发布到 GitHub（不覆盖任何现有项目）</h1>
+<p>建议独立仓库：<code>AIPMAndy/how-to-become-executive</code>。只有仓库主人实际创建并提交后，此链接才存在。</p>
+<h2>创建新公开仓库</h2>
+<ol>
+<li>打开 https://github.com/new 。</li>
+<li>Owner选择 <code>AIPMAndy</code>，Repository name填写 <code>how-to-become-executive</code>，Visibility为Public。</li>
+<li>不勾选初始化README、License、.gitignore，本项目已提供。</li>
+<li>创建仓库。解压本项目ZIP，在解压目录内执行：</li>
+</ol>
+<pre><code class="language-bash">git init -b main
+git add .
+git commit -m &quot;feat: launch executive career handbook&quot;
+git remote add origin https://github.com/AIPMAndy/how-to-become-executive.git
+git push -u origin main
+</code></pre>
+<p>需要本地git用户身份与有效GitHub登录；不要把任何访问令牌写进仓库。使用<code>gh</code>也可以创建：<code>gh repo create AIPMAndy/how-to-become-executive --public --source=. --remote=origin --push</code>。</p>
+<h2>启用 GitHub Pages</h2>
+<p>仓库 Settings → Pages → Deploy from a branch → <code>main</code> / <code>/(root)</code> → Save。</p>
+<p><strong>预计而未验证的地址：</strong><code>https://aipmandy.github.io/how-to-become-executive/</code>。待仓库创建并成功部署后再分享，不能先声称网站已经上线。</p>
+<h2>社交预览、About和Topics</h2>
+<ul>
+<li>About：<code>普通人成为高管保姆级指南｜7阶段84项行动，从业务骨干到项目Owner、团队经理与业务负责人，附实操模板与免费互动工具。</code></li>
+<li>Topics：<code>career-growth</code>, <code>leadership</code>, <code>management</code>, <code>career-guide</code>, <code>job-promotion</code>, <code>executive</code>, <code>open-source</code>, <code>chinese</code>。</li>
+<li>Social preview：上传已生成的 <code>assets/social-preview.png</code>（1200×630），与 README 首屏封面一致。</li>
+<li>成功启用Pages后，将真正网站链接放入仓库About。</li>
+</ul>
+<h2>验收</h2>
+<pre><code class="language-bash">python3 -m pip install -r requirements-dev.txt
+python3 build.py
+python3 -m unittest discover -s tests -v
+node tests/math.test.js
+</code></pre>
+<p>用手机和Mac分别打开首页，检查七阶段切换、搜索、展开、勾选、刷新保存、8维自评、导出90天计划、模板下载，以及文档链接。主页面完全单文件、无外部CDN；正式浏览器交互需上线后再验收。</p>
+<h2>v2发布前检查（2026-10-12）</h2>
+<ul>
+<li>官网首页与 README 均应显示“84项任务、18条研究及法规来源”，并链接10份 <code>playbooks/</code> 操作SOP与3条 <code>tracks/</code> 行业路线。</li>
+<li><code>templates/普通人成为高管_完整实操工作簿.xlsx</code> 必须包含7个工作表、教学演示数据和可计算的经营模型。</li>
+<li>执行 <code>python3 -m pip install -r requirements-dev.txt python3 build.py</code>、<code>python3 -m unittest discover -s tests -v</code> 和 <code>node tests/math.test.js</code>；如有 Playwright/Chromium 可运行 <code>python3 tests/browser_smoke.py</code>。</li>
+<li>进行人工检验：手机打开网站能搜到任务，资料页链接正确，XLSX与CSV可下载，导出计划可读。</li>
+<li>本项目示例数字与案例均为教学或真实用户合法信息；不要用造假的高管故事当宣传证据。</li>
+<li>设定 GitHub Pages 的地址只有仓库实际创建、部署成功后才成立。</li>
+</ul>
+</main><footer class="author-contact">求职、职业发展或 AI 应用遇到具体问题，可自愿咨询 Andy：微信 <strong>AIPMAndy</strong> · <a href="https://metaver.vip/" target="_blank" rel="noopener noreferrer">Andy 官网 ↗</a>。免费内容完整可用，咨询不承诺晋升或录用结果。</footer></body></html>

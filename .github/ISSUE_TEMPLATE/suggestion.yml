@@ -1,0 +1,20 @@
+name: 提交新模板或行业建议
+description: 用可复核的场景完善管理者成长指南
+title: '[建议] '
+body:
+  - type: input
+    id: industry
+    attributes:
+      label: 适用行业和岗位
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 具体操作建议和完成证据
+    validations:
+      required: true
+  - type: textarea
+    id: privacy
+    attributes:
+      label: 已检查无企业秘密、客户隐私和虚构案例？

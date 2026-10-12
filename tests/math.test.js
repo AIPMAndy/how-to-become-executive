@@ -1,0 +1,18 @@
+const assert=require('node:assert/strict');
+const m=require('../assets/math.js');
+const s=[3,2,2,1,0,1,2,2];
+const good=m.feedback(s);
+assert.equal(good.status,'ok');
+assert.equal(good.gaps[0].name,'经营意识');
+assert.equal(good.gaps[0].value,0);
+assert.equal(good.gaps[1].name,'团队管理');
+assert.equal(good.unknown,1);
+assert.equal(m.feedback([-1,1,1,1,1,1,1,1]).status,'invalid');
+assert.equal(m.feedback([4,1,1,1,1,1,1,1]).status,'invalid');
+assert.equal(m.feedback([2,2,2,2,2,2,2]).status,'invalid');
+assert.equal(m.feedback([0.1,1,1,1,1,1,1,1]).status,'invalid');
+assert.equal(m.progress({a:true,b:false},['a','b']),50);
+assert.equal(m.progress({},['a','b']),0);
+assert.equal(m.progress({a:true,b:true},['a','b']),100);
+assert.equal(m.progress({},[]),0);
+console.log('PASS: 12 mathematical and evidence-scale assertions');

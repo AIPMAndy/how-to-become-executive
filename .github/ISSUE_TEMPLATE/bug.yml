@@ -1,0 +1,15 @@
+name: 发现错误或反例
+description: 报告具体错误并提供可核实证据（勿含公司秘密）
+title: '[问题] '
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 哪里不准确？
+      description: 请提供章节、适用角色及问题，不要上传公司内部材料、个人薪酬或客户信息。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 公开依据或经过授权的反例
