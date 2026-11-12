@@ -1,3 +1,5 @@
+> **请先看这里：** 本仓库是旧版，已于 2026-10-16 存档并停止更新。正式版在 [AIPMAndy/how-to-become-an-executive](https://github.com/AIPMAndy/how-to-become-an-executive)，在线阅读：[https://aipmandy.github.io/how-to-become-an-executive/](https://aipmandy.github.io/how-to-become-an-executive/)。
+
 <div align="center">
 
 # 普通人成为高管保姆级指南
